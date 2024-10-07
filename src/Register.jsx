@@ -64,14 +64,14 @@ function Register() {
   };
 
   return (
-    <div>
+    <div className="Ram">
       <h1>Register</h1>
       {message && <p>{message}</p>}
       <form onSubmit={handleSubmit}>
         <div>
-          <label>
+          <label className="email">
             Email:
-            <input
+            <input className="input"
               type="email"
               value={email}
               onChange={handleInputChange(setEmail)}
@@ -80,9 +80,9 @@ function Register() {
           </label>
         </div>
         <div>
-          <label>
+          <label className="label2">
             Password:
-            <input
+            <input className="input2"
               type="password"
               value={password}
               onChange={handleInputChange(setPassword)}
@@ -90,18 +90,21 @@ function Register() {
             />
           </label>
         </div>
-        <div>
-          <label>
+        <div >
+          <div className="lo">
+          <label className="label2">
             Confirm Password:
-            <input
+            <input className="input3"
               type="password"
               value={confirmPassword}
               onChange={handleInputChange(setConfirmPassword)}
               required
             />
           </label>
+          </div>
+       
         </div>
-        <button type="submit" disabled={loading}>
+        <button className="login" type="submit" disabled={loading}>
           {loading ? 'Registering...' : 'Register'}
         </button>
       </form>
