@@ -42,10 +42,10 @@ function Login() {
       <h1>Login</h1>
       {message && <p>{message}</p>}
       <form onSubmit={handleSubmit}>
-        <div>
-          <label>
-            Email:
-            <input
+        <div className="sam">
+          <label className="email">
+            Email: 
+            <input className="input"
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
@@ -54,9 +54,9 @@ function Login() {
           </label>
         </div>
         <div>
-          <label>
+          <label className="label2">
             Password:
-            <input
+            <input className="input2"
               type="password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
@@ -64,7 +64,7 @@ function Login() {
             />
           </label>
         </div>
-        <button type="submit">Login</button>
+        <button className="login" type="submit">Login</button>
       </form>
     </div>
   );
