@@ -38,7 +38,7 @@ function Login() {
   };
 
   return (
-    <div>
+    <div className="Sam">
       <h1>Login</h1>
       {message && <p>{message}</p>}
       <form onSubmit={handleSubmit}>
